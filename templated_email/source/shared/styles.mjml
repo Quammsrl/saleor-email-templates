@@ -21,8 +21,12 @@
 </mj-style>
 <mj-style>
 
+* {
+  font-family: Verdana, sans-serif;
+}
+
   address {
     font-style: inherit;
-    font-family: Ubuntu, Helvetica, Arial;
+    font-family: Verdana, sans-serif;
   }
 </mj-style>
