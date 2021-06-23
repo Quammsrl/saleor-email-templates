@@ -4,13 +4,16 @@
   </mj-head>
   <mj-body>
     <mj-include path="./shared/header.mjml" />
-    <mj-section>
+     <mj-include path="./shared/topbar.mjml" />
+    <mj-section background-color="#F6F8FB">
       <mj-column>
-        <mj-text font-size="16px">
-            Hi!
+        <mj-text text-transform="uppercase" font-size="20px" font-weight="bold">
+          <p font-family="Verdana, sans-serif" style="text-align:center; line-height: 1.3;">  
+            Thank you<br> for your payment!
+          </p>  
         </mj-text>
-        <mj-text>
-            Thank you for your payment.
+        <mj-divider border-width="1px" border-style="solid" border-color="#DEDEDE" padding-bottom="25px" />
+        <mj-text color="#9b9b9b" font-size="14px" font-family="Verdana, sans-serif" line-height="1.3">
             Your payment was successfully processed.
         </mj-text>
       </mj-column>
