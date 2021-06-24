@@ -1,0 +1,36 @@
+<mj-section background-color="#F6F8FB" padding-top="0px" padding-bottom="5px">
+      <mj-column padding-top="0px">
+          <mj-table table-layout="fixed" padding-top="0px">
+          <tr>
+              <td style="vertical-align: top;">
+                  <p style="font-family: Verdana, sans-serif; font-size:14px;" >
+                    <span style="font-weight:bold;">Order</span><br/>
+                    # {{order.id}}
+                  </p>
+                  <p style="font-family: Verdana, sans-serif; font-size:14px;" >
+                    <span style="font-weight:bold;">Order Date</span><br/>
+                    {{format_datetime order.created "%m/%d/%Y"}}
+                  </p>
+              </td>
+              <td style="vertical-align: top;">
+                  <p style="font-family: Verdana, sans-serif; font-size:14px; padding-bottom:0px;margin-bottom:0px;" >
+                    <span style="font-weight:bold;">Shipping Address:</span></p>
+                    <p style="font-family: Verdana, sans-serif; font-size:14px; color:#9b9b9b; padding-top:0px; margin-top: 0px;">
+                    {{#if order.shipping_address}}
+                      {{format_address order.shipping_address}}
+                    {{/if}}
+                  </p>
+                  <p style="font-family: Verdana, sans-serif; font-size:14px; padding-bottom:0px; margin-bottom:0px;" >
+                    <span style="font-weight:bold;">Billing Address:</span></p>
+                    <p style="font-family: Verdana, sans-serif; font-size:14px; color:#9b9b9b;padding-top:0px; margin-top: 0px;">
+                    {{#if (compare (format_address order.billing_address) "==" (format_address order.shipping_address) )}}
+                        Same as shipping address.
+                    {{else}}
+                        {{format_address order.billing_address}}
+                    {{/if}}
+                  </p>
+              </td>
+            </tr>
+        </mj-table>
+        </mj-column>
+    </mj-section>

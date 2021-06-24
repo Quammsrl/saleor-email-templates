@@ -15,41 +15,12 @@
         <mj-divider border-width="1px" border-style="solid" border-color="#DEDEDE" padding-bottom="25px" />
         <mj-text color="#9b9b9b" font-size="14px" font-family="Verdana, sans-serif" line-height="1.3">
             Someone placed a new order in your store. To see order details please visit:
-            <a href="{{order.order_details_url}}">{{order.order_details_url}}</a>
+            <a href="{{order.order_details_url}}" style="color:#000000;">{{order.order_details_url}}</a>
         </mj-text>
       </mj-column>
     </mj-section>
     <mj-include path="./partials/_order_lines.mjml" />
-    <mj-section>
-      <mj-column>
-        <mj-table>
-          <thead class="table-header-row">
-            <tr>
-              <th>Billing address</th>
-              <th>Shipping address</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="address">
-                {{#if order.billing_address}}
-                  {{format_address order.billing_address}}
-                {{else}}
-                  No billing address
-                {{/if}}
-              </td>
-              <td css-class="address">
-                {{#if order.shipping_address}}
-                  {{format_address order.shipping_address}}
-                {{else}}
-                  No shipping required
-                {{/if}}
-              </td>
-            </tr>
-          </tbody>
-        </mj-table>
-      </mj-column>
-    </mj-section>
+    <mj-include path="./partials/_shipping.mjml" />
     <mj-include path="./shared/footer.mjml" />
   </mj-body>
 </mjml>

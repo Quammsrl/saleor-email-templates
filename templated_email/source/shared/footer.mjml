@@ -1,6 +1,6 @@
 <mj-section background-color="#F6F8FB">
   <mj-column>
-    <mj-text font-family=" Verdana, sans-serif " font-size="10px" color="#9b9b9b">
+    <mj-text font-family=" Verdana, sans-serif " font-size="10px" color="#9b9b9b" align="center">
         This is an automatically generated e-mail, please do not reply.
     </mj-text>
   </mj-column>

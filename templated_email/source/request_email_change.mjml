@@ -18,7 +18,7 @@
           It can be safely ignored if you did not request an email change. Click the link below to confirm new email address.
         </mj-text>
         <mj-text font-size="14px" font-family="Verdana, sans-serif" line-height="1.3">
-          <a href="{{redirect_url}}">
+          <a href="{{redirect_url}}" style="color:#000000;">
             {{redirect_url}}
           </a>
         </mj-text>

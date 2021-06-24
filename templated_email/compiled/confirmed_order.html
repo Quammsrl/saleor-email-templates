@@ -175,7 +175,7 @@
                   
       <div style="font-family:Verdana, sans-serif;font-size:14px;line-height:1.3;text-align:left;color:#9b9b9b;">{{#if order.order_details_url}}
               Your order has been confirmed by staff. To see your order details please visit:
-               <a href="{{order.order_details_url}}">{{order.order_details_url}}</a>
+               <a href="{{order.order_details_url}}" style="color:#000000;">{{order.order_details_url}}</a>
           {{else}}
               Your order has been confirmed by staff. Below is the list of ordered products.
           {{/if}}</div>
@@ -200,99 +200,62 @@
       <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     
       
-      <div style="margin:0px auto;max-width:600px;">
+      <div style="background:#F6F8FB;background-color:#F6F8FB;margin:0px auto;max-width:600px;">
         
-        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F8FB;background-color:#F6F8FB;width:100%;">
           <tbody>
             <tr>
-              <td style="direction: ltr; font-size: 0px; padding: 20px 0; text-align: center;" align="center">
-                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <td style="direction: ltr; font-size: 0px; padding: 20px 30px 10px; text-align: center;" align="center">
+                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
             
       <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
         
-      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#FFFFFF;vertical-align:top;" width="100%">
         <tbody>
           
               <tr>
                 <td align="left" style="font-size: 0px; padding: 10px 25px; word-break: break-word;">
                   
-      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
-        <tfoot>
-        <tr>
-          <td colspan="3" style="padding: 5px; text-align: right;" align="right">Subtotal</td>
-          <td style="padding: 5px; text-align: right;" align="right">
-            {{price order.subtotal_net_amount order.subtotal_gross_amount order.currency display_gross=order.display_gross_prices}}
-          </td>
-        </tr>
-        <tr>
-          <td colspan="3" style="padding: 5px; text-align: right;" align="right">
-              Shipping
-          </td>
-          <td style="padding: 5px; text-align: right;" align="right">
-            {{price order.shipping_price_net_amount order.shipping_price_gross_amount order.currency display_gross=order.display_gross_prices}}
-          </td>
-        </tr>
-        <tr>
-          <td colspan="3" style="padding: 5px; text-align: right;" align="right">
-            {{#if order.display_gross_prices}}
-                Taxes (included)
-            {{else}}
-                Taxes
-            {{/if}}
-          </td>
-          <td style="padding: 5px; text-align: right;" align="right">
-            {{price order.tax_amount order.tax_amount order.currency display_gross=order.display_gross_prices}}
-          </td>
-        </tr>
-        {{#if order.voucher_discount}}
+      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#9B9B9B;font-family:Verdana, sans-serif;font-size:16px;line-height:22px;table-layout:auto;width:100%;border:none;">
+        <tbody>
+           {{#each order.lines}}
           <tr>
-            <td colspan="3" style="padding: 5px; text-align: right;" align="right">
-                Discount
-            </td>
-            <td style="padding: 5px; text-align: right;" align="right">
-              {{price order.voucher_discount.amount_value order.voucher_discount.amount_value order.currency display_gross=order.display_gross_prices}}
-            </td>
-          </tr>
-        {{/if}}
-        <tr>
-          <td colspan="3" style="padding: 5px; text-align: right;" align="right">
-            <strong>
-              Total
-            </strong>
+          <td rowspan="4" style="padding: 5px; width: 30%; vertical-align: top; text-align: left; padding-right: 10px;" width="30%" valign="top" align="left">
+            {{get_product_image_thumbnail 100 product.first_image}}
           </td>
-          <td style="padding: 5px; text-align: right;" align="right">
-            <strong>
-              {{price order.total_net_amount order.total_gross_amount order.currency display_gross=order.display_gross_prices}}
-            </strong>
-          </td>
-        </tr>
-      </tfoot>
-      <thead class="table-header-row" style="border-bottom: 2px solid #000;">
-        <tr>
-          <th style="padding: 5px;">Item</th>
-          <th style="padding: 5px;">Quantity</th>
-          <th style="padding: 5px;">Per unit</th>
-          <th style="padding: 5px;">Subtotal</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{#each order.lines}}
-          <tr class="table-item-row" style="border-bottom: 1px solid #D3D1D0;">
-            {{#if variant_name}}
-              <td style="padding: 5px;">{{product_name}} ({{variant_name}})</td>
-            {{else}}
-              <td style="padding: 5px;">{{product_name}}</td>
-            {{/if}}
-            <td style="padding: 5px; text-align: right;" align="right">{{quantity}}</td>
-            <td style="padding: 5px; text-align: right;" align="right">
-              {{price unit_price_net_amount unit_price_gross_amount ../order.currency display_gross=../order.display_gross_prices}}
+          <td colspan="2" width="70%" style="padding: 5px; width: 70%; vertical-align: top; text-align: left; color: #000000; padding-top: 5px; padding-bottom: 15px;" valign="top" align="left">
+           {{product_name}}
             </td>
-            <td style="padding: 5px; text-align: right;" align="right">
-              {{price total_net_amount total_gross_amount ../order.currency display_gross=../order.display_gross_prices}}
-            </td>
-          </tr>
-        {{/each}}
-      </tbody>
+                  </tr>
+                  
+                   <tr>
+                   {{#if variant_name}}
+                    <td colspan="2" style="padding: 5px; vertical-align: top; text-align: left; font-size: 12px;" valign="top" align="left">
+                    {{variant_name}}
+                    </td>
+                    {{/if}}
+                  </tr>
+
+                  <tr>
+                   <td colspan="2" style="padding: 5px; vertical-align: top; text-align: left; font-size: 12px;" valign="top" align="left">
+                    SKU: {{product_sku}}
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td colspan="2" style="padding: 5px; vertical-align: top; text-align: left; font-size: 12px; padding-bottom: 20px;" valign="top" align="left">
+                    QTY: {{quantity}}
+                    </td>
+                  </tr>
+                  <tr style="border-top: 1px solid #F6F8FB;">
+                    <td style="padding: 5px; vertical-align: top; text-align: left; font-size: 14px; width: 50%; color: #000000; font-weight: bold; padding-top: 20px;" width="50%" valign="top" align="left">
+                  Price
+              </td>
+              <td style="padding: 5px; text-align: right; vertical-align: top; font-size: 14px; width: 50%; color: #000000; font-weight: bold; padding-top: 20px;" width="50%" align="right" valign="top">
+                {{price total_net_amount total_gross_amount ../order.currency display_gross=../order.display_gross_prices}}
+              </td>
+                  </tr>
+                </tbody>
       </table>
     
                 </td>
@@ -315,56 +278,68 @@
       <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     
       
-      <div style="margin:0px auto;max-width:600px;">
+      <div style="background:#F6F8FB;background-color:#F6F8FB;margin:0px auto;max-width:600px;">
         
-        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F8FB;background-color:#F6F8FB;width:100%;">
           <tbody>
             <tr>
-              <td style="direction: ltr; font-size: 0px; padding: 20px 0; text-align: center;" align="center">
+              <td style="direction: ltr; font-size: 0px; padding: 20px 0; padding-bottom: 5px; padding-top: 0px; text-align: center;" align="center">
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
             
       <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
         
-      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+        <tbody>
+          <tr>
+            <td style="padding: 5px; vertical-align: top; padding-top: 0px;" valign="top">
+              
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
         <tbody>
           
               <tr>
-                <td align="left" style="font-size: 0px; padding: 10px 25px; word-break: break-word;">
+                <td align="left" style="font-size: 0px; padding: 10px 25px; padding-top: 0px; word-break: break-word;">
                   
-      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
-        <thead class="table-header-row" style="border-bottom: 2px solid #000;">
-            <tr>
-              <th style="padding: 5px;">
-                  Billing address
-              </th>
-              <th style="padding: 5px;">
-                  Shipping address
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-             <td class="address" style="padding: 5px;">
-                {{#if order.billing_address}}
-                  {{format_address order.billing_address}}
-                {{else}}
-                  No billing address
-                {{/if}}
+      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:fixed;width:100%;border:none;">
+        <tr>
+              <td style="padding: 5px; vertical-align: top;" valign="top">
+                  <p style="font-family: Verdana, sans-serif; font-size:14px;">
+                    <span style="font-weight:bold;">Order</span><br>
+                    # {{order.id}}
+                  </p>
+                  <p style="font-family: Verdana, sans-serif; font-size:14px;">
+                    <span style="font-weight:bold;">Order Date</span><br>
+                    {{format_datetime order.created "%m/%d/%Y"}}
+                  </p>
               </td>
-              <td css-class="address" style="padding: 5px;">
-                {{#if order.shipping_address}}
-                  {{format_address order.shipping_address}}
-                {{else}}
-                  No shipping required
-                {{/if}}
+              <td style="padding: 5px; vertical-align: top;" valign="top">
+                  <p style="font-family: Verdana, sans-serif; font-size:14px; padding-bottom:0px;margin-bottom:0px;">
+                    <span style="font-weight:bold;">Shipping Address:</span></p>
+                    <p style="font-family: Verdana, sans-serif; font-size:14px; color:#9b9b9b; padding-top:0px; margin-top: 0px;">
+                    {{#if order.shipping_address}}
+                      {{format_address order.shipping_address}}
+                    {{/if}}
+                  </p>
+                  <p style="font-family: Verdana, sans-serif; font-size:14px; padding-bottom:0px; margin-bottom:0px;">
+                    <span style="font-weight:bold;">Billing Address:</span></p>
+                    <p style="font-family: Verdana, sans-serif; font-size:14px; color:#9b9b9b;padding-top:0px; margin-top: 0px;">
+                    {{#if (compare (format_address order.billing_address) "==" (format_address order.shipping_address) )}}
+                        Same as shipping address.
+                    {{else}}
+                        {{format_address order.billing_address}}
+                    {{/if}}
+                  </p>
               </td>
             </tr>
-          </tbody>
       </table>
     
                 </td>
               </tr>
             
+        </tbody>
+      </table>
+    
+            </td>
+          </tr>
         </tbody>
       </table>
     
@@ -396,9 +371,9 @@
         <tbody>
           
               <tr>
-                <td align="left" style="font-size: 0px; padding: 10px 25px; word-break: break-word;">
+                <td align="center" style="font-size: 0px; padding: 10px 25px; word-break: break-word;">
                   
-      <div style="font-family: Verdana, sans-serif ;font-size:10px;line-height:1;text-align:left;color:#9b9b9b;">This is an automatically generated e-mail, please do not reply.</div>
+      <div style="font-family: Verdana, sans-serif ;font-size:10px;line-height:1;text-align:center;color:#9b9b9b;">This is an automatically generated e-mail, please do not reply.</div>
     
                 </td>
               </tr>

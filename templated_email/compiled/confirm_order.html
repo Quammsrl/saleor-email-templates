@@ -139,7 +139,7 @@
         <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F8FB;background-color:#F6F8FB;width:100%;">
           <tbody>
             <tr>
-              <td style="direction: ltr; font-size: 0px; padding: 20px 0; text-align: center;" align="center">
+              <td style="direction: ltr; font-size: 0px; padding: 20px 0; padding-bottom: 5px; text-align: center;" align="center">
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
             
       <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -192,16 +192,21 @@
         <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F8FB;background-color:#F6F8FB;width:100%;">
           <tbody>
             <tr>
-              <td style="direction: ltr; font-size: 0px; padding: 20px 0; text-align: center;" align="center">
+              <td style="direction: ltr; font-size: 0px; padding: 20px 0; padding-bottom: 5px; padding-top: 0px; text-align: center;" align="center">
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
             
       <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
         
-      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+        <tbody>
+          <tr>
+            <td style="padding: 5px; vertical-align: top; padding-top: 0px;" valign="top">
+              
+      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
         <tbody>
           
               <tr>
-                <td align="left" style="font-size: 0px; padding: 10px 25px; word-break: break-word;">
+                <td align="left" style="font-size: 0px; padding: 10px 25px; padding-top: 0px; word-break: break-word;">
                   
       <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:fixed;width:100%;border:none;">
         <tr>
@@ -216,16 +221,16 @@
                   </p>
               </td>
               <td style="padding: 5px; vertical-align: top;" valign="top">
-                  <p style="font-family: Verdana, sans-serif; font-size:14px;">
+                  <p style="font-family: Verdana, sans-serif; font-size:14px; padding-bottom:0px;margin-bottom:0px;">
                     <span style="font-weight:bold;">Shipping Address:</span></p>
-                    <p style="font-family: Verdana, sans-serif; font-size:14px; color:#9b9b9b;">
+                    <p style="font-family: Verdana, sans-serif; font-size:14px; color:#9b9b9b; padding-top:0px; margin-top: 0px;">
                     {{#if order.shipping_address}}
                       {{format_address order.shipping_address}}
                     {{/if}}
                   </p>
-                  <p style="font-family: Verdana, sans-serif; font-size:14px;">
+                  <p style="font-family: Verdana, sans-serif; font-size:14px; padding-bottom:0px; margin-bottom:0px;">
                     <span style="font-weight:bold;">Billing Address:</span></p>
-                    <p style="font-family: Verdana, sans-serif; font-size:14px; color:#9b9b9b;">
+                    <p style="font-family: Verdana, sans-serif; font-size:14px; color:#9b9b9b;padding-top:0px; margin-top: 0px;">
                     {{#if (compare (format_address order.billing_address) "==" (format_address order.shipping_address) )}}
                         Same as shipping address.
                     {{else}}
@@ -242,41 +247,8 @@
         </tbody>
       </table>
     
-      </div>
-    
-          <!--[if mso | IE]></td></tr></table><![endif]-->
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        
-      </div>
-    
-      
-      <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    
-      
-      <div style="background:#F6F8FB;background-color:#F6F8FB;margin:0px auto;max-width:600px;">
-        
-        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F8FB;background-color:#F6F8FB;width:100%;">
-          <tbody>
-            <tr>
-              <td style="direction: ltr; font-size: 0px; padding: 30px 30px 0; text-align: center;" align="center">
-                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
-            
-      <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-        
-      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#FFFFFF;vertical-align:top;" width="100%">
-        <tbody>
-          
-              <tr>
-                <td align="left" style="font-size: 0px; padding: 20px; word-break: break-word;">
-                  
-      <div style="font-family:Verdana, sans-serif;font-size:20px;line-height:1.3;text-align:left;color:#000000;">Order summary</div>
-    
-                </td>
-              </tr>
-            
+            </td>
+          </tr>
         </tbody>
       </table>
     
@@ -299,7 +271,7 @@
         <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F8FB;background-color:#F6F8FB;width:100%;">
           <tbody>
             <tr>
-              <td style="direction: ltr; font-size: 0px; padding: 0px 30px 30px; text-align: center;" align="center">
+              <td style="direction: ltr; font-size: 0px; padding: 0px 30px 15px; text-align: center;" align="center">
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
             
       <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -312,6 +284,11 @@
                   
       <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#9B9B9B;font-family:Verdana, sans-serif;font-size:16px;line-height:22px;table-layout:fixed;width:100%;border:none;">
         <tbody>
+          <tr>
+              <td colspan="2" style="padding: 5px; vertical-align: top; text-align: left; font-size: 18px; color: #000000; padding-bottom: 20px;" valign="top" align="left">
+                   Order summary
+              </td>
+          </tr>
           <tr>
               <td style="padding: 5px; vertical-align: top; text-align: left; font-size: 16px; width: 50%;" width="50%" valign="top" align="left">
                   Subtotal
@@ -386,7 +363,7 @@
         <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F8FB;background-color:#F6F8FB;width:100%;">
           <tbody>
             <tr>
-              <td style="direction: ltr; font-size: 0px; padding: 50px 30px 30px; text-align: center;" align="center">
+              <td style="direction: ltr; font-size: 0px; padding: 20px 30px 10px; text-align: center;" align="center">
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
             
       <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -402,7 +379,7 @@
            {{#each order.lines}}
           <tr>
           <td rowspan="4" style="padding: 5px; width: 30%; vertical-align: top; text-align: left; padding-right: 10px;" width="30%" valign="top" align="left">
-            <p>image</p>
+            {{get_product_image_thumbnail 100 product.first_image}}
           </td>
           <td colspan="2" width="70%" style="padding: 5px; width: 70%; vertical-align: top; text-align: left; color: #000000; padding-top: 5px; padding-bottom: 15px;" valign="top" align="left">
            {{product_name}}
@@ -415,6 +392,12 @@
                     {{variant_name}}
                     </td>
                     {{/if}}
+                  </tr>
+
+                  <tr>
+                   <td colspan="2" style="padding: 5px; vertical-align: top; text-align: left; font-size: 12px;" valign="top" align="left">
+                    SKU: {{product_sku}}
+                    </td>
                   </tr>
                   
                   <tr>
@@ -458,7 +441,7 @@
         <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F6F8FB;background-color:#F6F8FB;width:100%;">
           <tbody>
             <tr>
-              <td style="direction: ltr; font-size: 0px; padding: 30px 30px; text-align: center;" align="center">
+              <td style="direction: ltr; font-size: 0px; padding: 10px 30px 0px; text-align: center;" align="center">
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
             
       <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -467,19 +450,19 @@
         <tbody>
           
               <tr>
-                <td align="left" style="font-size: 0px; padding: 10px 25px; word-break: break-word;">
+                <td align="left" style="font-size: 0px; padding: 10px 25px; padding-bottom: 5px; word-break: break-word;">
                   
       <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:20px;font-weight:bold;line-height:1;text-align:left;color:#000000;"><p font-family="Verdana, sans-serif" style="text-align:center; line-height: 1.3;">  
-            Do you have questions<br> about the order?
+            Do you have any questions<br> about the order?
           </p></div>
     
                 </td>
               </tr>
             
               <tr>
-                <td align="left" style="font-size: 0px; padding: 10px 25px; word-break: break-word;">
+                <td align="left" style="font-size: 0px; padding: 10px 25px; padding-top: 5px; word-break: break-word;">
                   
-      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:14px;line-height:1;text-align:left;color:#000000;"><p font-family="Verdana, sans-serif" style="text-align:center; line-height: 1.3; color: #9B9B9B;">  
+      <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:14px;line-height:1;text-align:left;color:#000000;"><p font-family="Verdana, sans-serif" style="text-align:center; line-height: 1.3; color: #9B9B9B; padding-top:0px;">  
             Send an email to <a href="mailto:orders@alebikewear.com" style="color:#9B9B9B; font-weight:bold;">orders@alebikewear.com</a>
           </p></div>
     
@@ -517,9 +500,9 @@
         <tbody>
           
               <tr>
-                <td align="left" style="font-size: 0px; padding: 10px 25px; word-break: break-word;">
+                <td align="center" style="font-size: 0px; padding: 10px 25px; word-break: break-word;">
                   
-      <div style="font-family: Verdana, sans-serif ;font-size:10px;line-height:1;text-align:left;color:#9b9b9b;">This is an automatically generated e-mail, please do not reply.</div>
+      <div style="font-family: Verdana, sans-serif ;font-size:10px;line-height:1;text-align:center;color:#9b9b9b;">This is an automatically generated e-mail, please do not reply.</div>
     
                 </td>
               </tr>

@@ -19,7 +19,7 @@
           {{#if fulfillment.tracking_number}}
             {{#if fulfillment.is_tracking_number_url}}
                 You can track your shipment with
-                <a href="{{ fulfillment.tracking_number }}">{{ fulfillment.tracking_number }}</a> link.
+                <a href="{{ fulfillment.tracking_number }}" style="color:#000000;">{{ fulfillment.tracking_number }}</a> link.
             {{else}}
                 You can track your shipment with {{ fulfillment.tracking_number }} code.
             {{/if}}
