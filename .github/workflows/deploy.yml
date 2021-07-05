@@ -3,7 +3,7 @@ name: Deploy
 on: push
 jobs:
   build:
-    runs-on: linux
+    runs-on: ubuntu-latest
     steps:
       - name: Extract branch name
         shell: bash
