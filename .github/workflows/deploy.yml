@@ -1,0 +1,30 @@
+# Deploy Digital Ocean
+name: Deploy
+on: push
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+      - name: ${{ steps.extract_branch.outputs.branch }} Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSHKEY }}
+          script_stop: true
+          script: |
+            cd /home/saleor-frontend/ale-us-emails
+            git fetch --all
+            git reset --hard origin/${{ steps.extract_branch.outputs.branch }}
+            git checkout ${{ steps.extract_branch.outputs.branch }}
+            npm install
+            npm run npm run build-emails
+            rm -rf /home/saleor-frontend/emails/${{ steps.extract_branch.outputs.branch }}
+            mkdir -p /home/saleor-frontend/emails/${{ steps.extract_branch.outputs.branch }}
+            cp -rf /home/saleor-frontend/ale-us-emails/templated_email/compiled/* /home/saleor-frontend/emails/${{ steps.extract_branch.outputs.branch }}
+
