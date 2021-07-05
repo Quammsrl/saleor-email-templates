@@ -23,7 +23,7 @@ jobs:
             git reset --hard origin/${{ steps.extract_branch.outputs.branch }}
             git checkout ${{ steps.extract_branch.outputs.branch }}
             npm install
-            npm run npm run build-emails
+            npm run build-emails
             rm -rf /home/saleor-frontend/emails/${{ steps.extract_branch.outputs.branch }}
             mkdir -p /home/saleor-frontend/emails/${{ steps.extract_branch.outputs.branch }}
             cp -rf /home/saleor-frontend/ale-us-emails/templated_email/compiled/* /home/saleor-frontend/emails/${{ steps.extract_branch.outputs.branch }}
