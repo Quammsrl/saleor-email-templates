@@ -381,10 +381,10 @@
             
             <tr>
               <td rowspan="4" style="padding: 5px; width: 30%; vertical-align: top; text-align: left; padding-right: 10px;" width="30%" valign="top" align="left">
-                {{#if thumbnail}}
-                  <mj-image src="{{thumbnail.url}}" alt="{{thumbnail.alt}}" padding="0px">
+                {{#if product}}
+                  <p>{{product.first_image.original['60x60']}}</p>
                 {{/if}}
-              </mj-image></td>
+              </td>
               <td colspan="2" width="70%" style="padding: 5px; width: 70%; vertical-align: top; text-align: left; color: #000000; padding-top: 5px; padding-bottom: 15px;" valign="top" align="left">
               {{product_name}}<br>
               </td>
