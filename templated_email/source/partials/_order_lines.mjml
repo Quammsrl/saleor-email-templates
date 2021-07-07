@@ -5,7 +5,12 @@
            
             {{#each order.lines}}
             
-            <tr>          
+            <tr>
+              <td rowspan="4" style="width: 30%;vertical-align: top; text-align: left; padding-right: 10px;" width="30%">
+                {{#if thumbnail}}
+                  <mj-image src="{{thumbnail.url}}" alt="{{thumbnail.alt}}" padding="0px" />
+                {{/if}}
+              </td>
               <td colspan="2" width="70%" style="width: 70%; vertical-align: top; text-align: left; color: #000000; padding-top: 5px; padding-bottom:15px;">
               {{product_name}}<br>
               </td>
