@@ -376,44 +376,51 @@
                   
       <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#9B9B9B;font-family:Verdana, sans-serif;font-size:16px;line-height:22px;table-layout:auto;width:100%;border:none;">
         <tbody>
-           {{#each order.lines}}
-          <tr>
-          
-          <td colspan="2" width="70%" style="padding: 5px; width: 70%; vertical-align: top; text-align: left; color: #000000; padding-top: 5px; padding-bottom: 15px;" valign="top" align="left">
-           {{product_name}}<br>
-           ciao
-            </td>
-                  </tr>
-                  
-                   <tr>
-                   {{#if variant_name}}
-                    <td colspan="2" style="padding: 5px; vertical-align: top; text-align: left; font-size: 12px;" valign="top" align="left">
-                    {{variant_name}}
-                    </td>
-                    {{/if}}
-                  </tr>
+           
+            {{#each order.lines}}
 
-                  <tr>
-                   <td colspan="2" style="padding: 5px; vertical-align: top; text-align: left; font-size: 12px;" valign="top" align="left">
-                    SKU: {{product_sku}}
-                    </td>
-                  </tr>
-                  
-                  <tr>
-                    <td colspan="2" style="padding: 5px; vertical-align: top; text-align: left; font-size: 12px; padding-bottom: 20px;" valign="top" align="left">
-                    QTY: {{quantity}}
-                    </td>
-                  </tr>
-                  <tr style="border-top: 1px solid #F6F8FB;">
-                    <td style="padding: 5px; vertical-align: top; text-align: left; font-size: 14px; width: 50%; color: #000000; font-weight: bold; padding-top: 20px;" width="50%" valign="top" align="left">
-                  Price
+            <p>{{product_name}}</p>
+            
+            <!--<tr>          
+              <td colspan="2" width="70%" style="width: 70%; vertical-align: top; text-align: left; color: #000000; padding-top: 5px; padding-bottom:15px;">
+              {{product_name}}<br>
               </td>
-              <td style="padding: 5px; text-align: right; vertical-align: top; font-size: 14px; width: 50%; color: #000000; font-weight: bold; padding-top: 20px;" width="50%" align="right" valign="top">
+            </tr>
+                    
+            <tr>
+              {{#if variant_name}}
+                <td colspan="2" style="vertical-align: top; text-align: left; font-size: 12px;">
+                  {{variant_name}}
+                </td>
+              {{/if}}
+            </tr>
+
+            <tr>
+              <td colspan="2" style="vertical-align: top; text-align: left; font-size: 12px;">
+                SKU: {{product_sku}}
+              </td>
+            </tr>
+                    
+            <tr>
+              <td colspan="2" style="vertical-align: top; text-align: left; font-size: 12px; padding-bottom:20px;">
+                QTY: {{quantity}}
+              </td>
+            </tr>
+
+            <tr style="border-top: 1px solid #F6F8FB;">
+              <td style="vertical-align: top; text-align: left; font-size: 14px; width: 50%; color: #000000; font-weight:bold; padding-top:20px;">
+                Price
+              </td>
+              <td style="text-align: right; vertical-align: top; font-size: 14px; width: 50%; color: #000000; font-weight:bold; padding-top:20px;">
                 {{price total_net_amount total_gross_amount ../order.currency display_gross=../order.display_gross_prices}}
               </td>
-                  </tr>
-                  {{/each}}
-                </tbody>
+            </tr>-->
+
+            {{else}}
+              <p>No content</p>
+            {{/each}}
+
+          </tbody>
       </table>
     
                 </td>
