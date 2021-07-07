@@ -10,7 +10,7 @@
           <td colspan="2" width="70%" style="width: 70%; vertical-align: top; text-align: left; color: #000000; padding-top: 5px; padding-bottom:15px;">
            {{product_name}}<br>
            {{#if thumbnail}}
-           {{ thumbnail(100).url }}
+           ciao
            {{/if}}
             </td>
                   </tr>
