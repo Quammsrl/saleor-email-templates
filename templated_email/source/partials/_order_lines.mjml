@@ -4,10 +4,8 @@
           <tbody>
            
             {{#each order.lines}}
-
-            <p>{{product_name}}</p>
             
-            <!--<tr>          
+            <tr>          
               <td colspan="2" width="70%" style="width: 70%; vertical-align: top; text-align: left; color: #000000; padding-top: 5px; padding-bottom:15px;">
               {{product_name}}<br>
               </td>
@@ -40,10 +38,14 @@
               <td style="text-align: right; vertical-align: top; font-size: 14px; width: 50%; color: #000000; font-weight:bold; padding-top:20px;">
                 {{price total_net_amount total_gross_amount ../order.currency display_gross=../order.display_gross_prices}}
               </td>
-            </tr>-->
+            </tr>
 
             {{else}}
-              <p>No content</p>
+              <tr>          
+                <td colspan="2" width="70%" style="width: 70%; vertical-align: top; text-align: left; color: #000000; padding-top: 5px; padding-bottom:15px;">
+                  No content
+                </td>
+              </tr>
             {{/each}}
 
           </tbody>
