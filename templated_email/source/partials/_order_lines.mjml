@@ -39,12 +39,9 @@
                 {{price total_net_amount total_gross_amount ../order.currency display_gross=../order.display_gross_prices}}
               </td>
                   </tr>
+                  {{/each}}
                 </tbody>
               </mj-table>  
-           
-          
-        {{/each}}
-           
           </tbody>
         </mj-table>
         </mj-column>
