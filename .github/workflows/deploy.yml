@@ -24,7 +24,7 @@ jobs:
             git checkout ${{ steps.extract_branch.outputs.branch }}
             npm install
             npm run build-emails
-            rm -rf /home/saleor-frontend/emails/${{ steps.extract_branch.outputs.branch }}
             mkdir -p /home/saleor-frontend/emails/${{ steps.extract_branch.outputs.branch }}
+            rm -rf /home/saleor-frontend/emails/${{ steps.extract_branch.outputs.branch }}/*
             cp -rf /home/saleor-frontend/ale-us-emails/templated_email/compiled/* /home/saleor-frontend/emails/${{ steps.extract_branch.outputs.branch }}
 
