@@ -5,7 +5,7 @@
            
             {{#each order.lines}}
             
-            <tr>
+            <tr style="padding-top:10px;">
               <td rowspan="4" style="width: 30%;vertical-align: top; text-align: left; padding-right: 10px;" width="30%">
                 {{#if product}}
                   <img width="130" src="{{get_product_image_thumbnail 130 product.first_image}}" />
@@ -16,7 +16,7 @@
               </td>
             </tr>
                     
-            <tr>
+            <tr style="padding-top:10px;">
               {{#if variant_name}}
                 <td colspan="2" style="vertical-align: top; text-align: left; font-size: 12px;">
                   {{variant_name}}
@@ -36,7 +36,7 @@
               </td>
             </tr>
 
-            <tr style="border-top: 1px solid #F6F8FB;">
+            <tr style="border-top: 1px solid #F6F8FB; padding-bottom:10px;">
               <td style="vertical-align: top; text-align: left; font-size: 14px; width: 50%; color: #000000; font-weight:bold; padding-top:20px;">
                 Price
               </td>
