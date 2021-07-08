@@ -1,55 +1,123 @@
 <mjml>
   <mj-head>
-    <mj-include path="./shared/styles.mjml" />
+    <mj-style inline="inline">
+      .no-display {
+      display: none;
+      }
+
+      .no-padding td {
+      padding: 0px;
+      }
+
+      .table-header-row {
+      border-bottom: 2px solid #000;
+      }
+
+      .table-item-row {
+      border-bottom: 1px solid #D3D1D0;
+      }
+    </mj-style>
+    <mj-style>
+
+      * {
+      font-family: Verdana, sans-serif;
+      }
+
+      address {
+      font-style: inherit;
+      font-family: Verdana, sans-serif;
+      }
+      @media screen and (max-width:600px) {
+      .header-text-container p {
+      font-size: 24px;
+      }
+      br {
+      display: none;
+      }
+      .email-button table, .email-button p, .email-button a {
+      font-size: 13px !important;
+      width: 200px !important;
+      }
+      .email-spacer {
+      display: none;
+      }
+      .bottom-divider {
+      padding-top: 20px !important;
+      }
+      }
+    </mj-style>
   </mj-head>
   <mj-body>
     <mj-include path="./shared/header.mjml" />
    <mj-include path="./shared/topbar.mjml" />
+
     <mj-section background-color="#F6F8FB">
       <mj-column>
-        <mj-text text-transform="uppercase" font-size="20px" font-weight="bold">
-          <p font-family="Verdana, sans-serif" style="text-align:center; line-height: 1.3;">
-            Welcome!
+        <mj-text font-size="30px" align="center" line-height="1.2" css-class="header-text-container">
+          <p padding="0" style="margin: 0;">
+            Welcome! <br /> Confirm your email and <br /> immediately take advantage <br /> of the 25% discount <br /> reserved for you
           </p>
         </mj-text>
-        
-        <mj-divider border-width="1px" border-style="solid" border-color="#DEDEDE" padding-bottom="25px" />
-        
-        <mj-text color="#9b9b9b" font-size="14px" font-family="Verdana, sans-serif" line-height="1.3">
-          In order to log into {{ site_name }}, you have to confirm your email address first.
-          Please click the link below to do so and log into your account.
-        </mj-text>
-        
-        <mj-text font-size="14px" font-family="Verdana, sans-serif" line-height="1.3">
-          <a href="{{ confirm_url }}" style="color:#000000;">
-            {{ confirm_url }}
-          </a>
-        </mj-text>
-        
-        <mj-divider border-width="1px" border-style="solid" border-color="#DEDEDE" padding-top="25px" />
-        
-        <mj-text font-size="20px" font-weight="bold">
-          <p font-family="Verdana, sans-serif" style="text-align:center; line-height: 1.3;">
-            Welcome discount code
-          </p>
-        </mj-text>
-        
-        <mj-text color="#FFB100" text-transform="uppercase" font-size="20px" font-weight="bold">
-          <p font-family="Verdana, sans-serif" style="text-align:center; line-height: 1.3;">
-            Welcome
-          </p>
-        </mj-text>
-        
-        <mj-text color="#9b9b9b" font-size="14px" line-height="1.3">
-          <p font-family="Verdana, sans-serif" style="text-align:center; line-height: 1.3;">
-            Use the above code at checkout to receive <br /> an instant <b>25% discount</b> on your next order!
-          </p>
-          <p font-family="Verdana, sans-serif" style="font-size: 11px; text-align:center; line-height: 1.3;margin-bottom: 0;">
-            <i>Offer valid for one time use only</i>
-          </p>
-        </mj-text>    
       </mj-column>
     </mj-section>
+
+    <!-- Main Image -->
+    <mj-section background-color="#F6F8FB" padding="0">
+      <mj-column>
+        <mj-image src="https://www.mcipollini.com/meta-image-default.jpg" padding="0" fluid-on-mobile="true" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#F6F8FB" css-class="intro-section">
+      <mj-column>
+        <mj-text font-size="16px" align="center" line-height="25px">
+          <p style="margin: 0;">In order to log into {{ site_name }}, you have to confirm <br /> your email address first. Please click the link below <br /> to do so and log into your account.</p>
+        </mj-text>
+        <mj-button background-color="transparent" border="1px solid black" border-radius="0" color="black" text-transform="uppercase" font-size="16px" font-weight="bold" width="400px" inner-padding="23px 0px" href="{{ confirm_url }}" css-class="email-button">
+          Confirm your email
+        </mj-button>
+        <mj-spacer height="50px" css-class="email-spacer" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#FFFFFF">
+      <mj-column>
+
+        <mj-spacer height="45px" css-class="email-spacer" />
+
+        <mj-text font-size="40px" line-height="40px" align="center" css-class="header-text-container">
+          <p style="margin: -5px 0 0 0;">
+            Take 25% off
+          </p>
+        </mj-text>
+
+        <mj-button background-color="linear-gradient(90deg, #F762CE 0%, #F65FA7 39%, #EBDF21 100%)" border="none" border-radius="0" color="white" text-transform="uppercase" font-size="20px" font-weight="bold" width="400px" inner-padding="20px 0px" css-class="email-button">
+          <span style="letter-spacing: 2px;">Welcome</span>
+        </mj-button>
+
+        <mj-text font-size="16px" line-height="25px" align="center">
+          <p style="margin:0;">
+            To use your discount, simply enter <br /> WELCOME at checkout*
+          </p>
+        </mj-text>
+
+        <mj-text font-size="14px" line-height="22px" align="center" color="#9b9b9b" font-style="italic">
+          <p style="margin:0;">
+            Offer valid for one time use only
+          </p>
+        </mj-text>
+
+        <mj-divider border-width="1px" border-style="solid" border-color="#DEDEDE" padding-top="65px" css-class="bottom-divider" />
+
+        <mj-text font-size="12px" line-height="22px" color="#9b9b9b" font-style="italic">
+          <p style="margin:0;">
+            * Please note that the following are excluded from WELCOME discount code: Gift Cards, Subscriptions, the Super Set, Alé Does Good designs, Bundles, and Alé Partnerships (The Very Hungry Caterpillar Set, The Natural Curiosities Set, and their individual designs). Non-Alé products such as Pins and Balloons cannot be discounted. This discount code cannot be applied to previous purchases or other Alé services such as Custom, Wholesale, or Events. Standard shipping rates still apply. This discount code cannot be used with other existing discount codes and promotions.
+          </p>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
     <mj-include path="./shared/footer.mjml" />
   </mj-body>
 </mjml>
