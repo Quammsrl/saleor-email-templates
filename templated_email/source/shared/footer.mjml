@@ -1,7 +1,10 @@
 
 <mj-section background-color="#000000">
-  <mj-column>
-    <mj-text align="center" font-family=" Verdana, sans-serif " padding="5px" color="#9B9B9B" font-size="12px" text-decoration="none">
+  <mj-column padding="0px">
+  <mj-table align="center" padding="0px">
+          <tr style="background-image: linear-gradient(#000000, #000000); color-scheme: light; text-align:center;">
+            <td style="background-image: linear-gradient(#000000, #000000); color-scheme: light; text-align:center; padding: 0px;">
+             <mj-text align="center" font-family=" Verdana, sans-serif " padding="5px" color="#9B9B9B" font-size="12px" text-decoration="none">
         <a href="https://www.alebikewear.com/customer-service/terms-and-condition/" style="color: #9B9B9B; padding: 5px; text-decoration: none; display: inline-block;">Terms and conditions</a><br>
         <a href="https://www.alebikewear.com/policy/privacy-policy/" style="color: #9B9B9B; padding: 5px; text-decoration: none; display: inline-block;">Privacy policy</a><br>
         <a href="https://www.alebikewear.com/customer-service/shipping-and-delivery/" style="color: #9B9B9B; padding: 5px; text-decoration: none; display: inline-block;">Shopping and delivery</a><br>
@@ -9,6 +12,9 @@
         <a href="https://www.alebikewear.com/customer-service/vouchers/" style="color: #9B9B9B; padding: 5px; text-decoration: none; display: inline-block;">Vouchers</a><br>
         
     </mj-text>
+     </td>
+          </tr>
+  </mj-table>
   </mj-column>
 </mj-section>
 <mj-section background-color="#F6F8FB" padding="0px">
