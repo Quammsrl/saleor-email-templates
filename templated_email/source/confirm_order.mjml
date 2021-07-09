@@ -21,9 +21,9 @@
 
     <mj-include path="./partials/_order_lines.mjml" />
 
-    <mj-section background-color="#F6F8FB" padding="10px 30px 0px">
-      <mj-column>
-        <mj-text font-size="20px" font-weight="bold" padding-bottom="5px" >
+    <mj-section background-color="#F6F8FB" padding="10px 5% 0px">
+      <mj-column padding-left="0" padding-right="0">
+        <mj-text font-size="20px" font-weight="bold" padding-bottom="5px" padding-left="0" padding-right="0">
           <p font-family="Verdana, sans-serif" style="text-align:center; line-height: 1.3;">  
             Do you have any questions<br/> about the order?
           </p>  

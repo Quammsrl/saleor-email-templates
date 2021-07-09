@@ -1,8 +1,8 @@
 <mj-section background-color="#000000" padding="0px" >
-  <mj-column padding="20px">
-  <mj-table align="center">
+  <mj-column padding="0px">
+  <mj-table align="center" padding="0px">
           <tr style="background-image: linear-gradient(#000000, #000000); color-scheme: light; text-align:center;">
-            <td style="background-image: linear-gradient(#000000, #000000); color-scheme: light; text-align:center; padding: 0px;">
+            <td style="background-image: linear-gradient(#000000, #000000); color-scheme: light; text-align:center; padding: 20px;">
               <a href="https://www.alebikewear.com/" target="_blank"><img src="https://res.cloudinary.com/hghbldolt/image/upload/v1/media/markdownx/da66d685-480e-41b9-88f9-59dea6ba4717_oqbmil" style="padding: 0px; width: 100px;" width="100px" /></a>
             </td>
           </tr>

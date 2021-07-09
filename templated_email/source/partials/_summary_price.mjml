@@ -1,4 +1,4 @@
-<mj-section background-color="#F6F8FB" padding="0px 30px 15px">
+<mj-section background-color="#F6F8FB" padding="0px 5% 15px">
       <mj-column background-color="#FFF">  
           <mj-table table-layout="fixed" color="#9B9B9B" font-family="Verdana, sans-serif" font-size="16px">
           <tbody>
