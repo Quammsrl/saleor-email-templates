@@ -4,17 +4,26 @@
           <tbody>
             {{#if physical_lines}}
               {{#each physical_lines}}
-              <tr>
-                 <td style=" vertical-align: top; text-align: left; color: #000000; padding-top: 10px; padding-bottom:10px; margin-top:5px;">{{order_line.product_name}}</td>
-               
-              </tr>
+
+              <tr style="padding-top:10px;">
+              <td rowspan="3" style="width: 30%;vertical-align: top; text-align: left; padding-right: 10px; padding-top:20px;" width="30%">
+                {{#if order_line.product}}
+                  <img width="130" src="{{get_product_image_thumbnail 130 order_line.product.first_image}}" />
+                {{/if}}
+              </td>
+              <td colspan="2" width="70%" style="width: 70%; vertical-align: top; text-align: left; color: #000000; padding-top: 15px; padding-bottom:15px;">
+              {{order_line.product_name}}<br>
+              </td>
+            </tr>
+
+
               <tr>
                 {{#if order_line.variant_name}}
-                  <td style=" vertical-align: top; text-align: left;  padding-top: 5px;">{{order_line.variant_name}}</td>
+                  <td colspan="2" style=" vertical-align: top; text-align: left;  padding-top: 5px;">{{order_line.variant_name}}</td>
                 {{/if}}
               </tr>
-              <tr style="border-bottom: 1px solid #F6F8FB;">
-                <td style="vertical-align: top; text-align: left; padding-bottom:10px;">{{quantity}}</td>
+              <tr colspan="2" style="border-bottom: 1px solid #F6F8FB;">
+                <td style="vertical-align: top; text-align: left; padding-bottom:10px;">QTY: {{quantity}}</td>
               </tr>
             {{/each}}
             {{/if}}

@@ -23,7 +23,7 @@
           {{else}}
               Thank you for your order. Below is the list of fulfilled products.
           {{/if}}
-            Thank you for your order. Below is the list of fulfilled products.
+            
           {{#if fulfillment.tracking_number}}
             {{#if fulfillment.is_tracking_number_url}}
                 You can track your shipment with
